@@ -9,8 +9,8 @@ describe('register functionality', () => {
         const res = await request(server)
             .post("/api/auth/register")
             .send({
-                name: "African",
-                password: "African"
+                name: "2",
+                password: "2"
             });
         expect(res.type).toBe("application/json");
     });
@@ -22,7 +22,7 @@ describe("login functionality", () => {
     it("should return status 200", async () => {
         const res = await request(server)
             .post("/api/auth/login")
-            .send({ name: "African", password: "African" });
+            .send({ name: "2", password: "2" });
 
         expect(res.status).toBe(200);
     });
@@ -30,7 +30,7 @@ describe("login functionality", () => {
     it("should return a token", async () => {
         const res = await request(server)
             .post("/api/auth/login")
-            .send({ name: "African", password: "African" });
+            .send({ name: "2", password: "2" });
 
         expect(res.body.token).toBeTruthy();
     });
@@ -38,7 +38,7 @@ describe("login functionality", () => {
     it("should return json", async () => {
         const res = await request(server)
             .post("/api/auth/login")
-            .send({ name: "African", password: "African" });
+            .send({ name: "2", password: "2" });
 
         expect(res.type).toBe("application/json");
     });

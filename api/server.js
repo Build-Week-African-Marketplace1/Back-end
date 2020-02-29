@@ -19,6 +19,6 @@ server.get('/', (req, res) => {
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, usersRouter);
-server.use('/api/inputs', authenticate, inputsRouter);
+server.use('/api/inputs', inputsRouter);
 
 module.exports = server;
